@@ -76,7 +76,7 @@ class A2TYoo2021(AttackRecipe):
             model_wrapper.model.config.max_position_embeddings - 2,
         )
         search_method = GreedyWordSwapWIR(
-            wir_method="gradient", truncate_words_to=max_len
+            wir_method="gradient"
         )
 
         return Attack(goal_function, constraints, transformation, search_method)
